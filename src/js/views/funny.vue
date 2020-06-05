@@ -28,7 +28,8 @@ export default {
     justify-content: center;
     align-items: center;
     width: 640px;
-    height: 500px;
+    height: 200px;
+    margin-top: 100px;
     ul{
         list-style: none;
         // height: 200px;

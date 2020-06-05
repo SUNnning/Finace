@@ -24,44 +24,48 @@ export default {
             items: [
                 {
                     href: 'funny0',
-                    src: 'https://img20.360buyimg.com/mcpageview/jfs/t1/93607/27/9768/38387/5e11d688E04270824/2d9495f7de2365ca.jpg'
+                    src: '//img20.360buyimg.com/mcpageview/jfs/t1/93607/27/9768/38387/5e11d688E04270824/2d9495f7de2365ca.jpg'
                 },
                 {
                     href: 'funny1',
-                    src: 'https://img20.360buyimg.com/mcpageview/jfs/t1/106678/1/12210/92914/5e4535daE1770d4c3/30137746303353c1.jpg'
+                    src: '//img20.360buyimg.com/mcpageview/jfs/t1/106678/1/12210/92914/5e4535daE1770d4c3/30137746303353c1.jpg'
                 },
                 {
                     href: 'funny2',
-                    src: 'https://img20.360buyimg.com/mcpageview/jfs/t1/122349/17/1613/199131/5ebe417bE9608b120/2d1eafa4647e5801.jpg'
+                    src: '//img20.360buyimg.com/mcpageview/jfs/t1/122349/17/1613/199131/5ebe417bE9608b120/2d1eafa4647e5801.jpg'
                 }
             ],
             enters: [
                 {
                     href: 'fun',
-                    title: '优惠券',
-                    src: 'https://img20.360buyimg.com/mcpageview/jfs/t1/101844/12/9760/11216/5e11d703Ec915a9b9/014b4c8a90f4f970.png'
+                    title: '我',
+                    src: '//img20.360buyimg.com/mcpageview/jfs/t1/101844/12/9760/11216/5e11d703Ec915a9b9/014b4c8a90f4f970.png'
                 },
                 {
                     href: 'fun',
-                    title: '领钢镚',
-                    src: 'https://img20.360buyimg.com/mcpageview/jfs/t1/90523/1/9767/16031/5e11d735E29291893/7ea1474e22f075a3.png'
+                    title: '董',
+                    src: '//img20.360buyimg.com/mcpageview/jfs/t1/90523/1/9767/16031/5e11d735E29291893/7ea1474e22f075a3.png'
                 },
                 {
                     href: 'fun',
-                    title: '白条提额',
-                    src: 'https://img20.360buyimg.com/mcpageview/jfs/t1/94998/29/9746/11665/5e11d753E53811340/b555a3fb637dad6d.png'
+                    title: '哥',
+                    src: '//img20.360buyimg.com/mcpageview/jfs/t1/94998/29/9746/11665/5e11d753E53811340/b555a3fb637dad6d.png'
                 },
                 {
                     href: 'fun',
-                    title: '白条提额',
-                    src: 'https://img20.360buyimg.com/mcpageview/jfs/t1/95010/16/9777/10019/5e11d791E1d2871b3/66a53d1849c687e7.png'
+                    title: '最',
+                    src: '//img20.360buyimg.com/mcpageview/jfs/t1/95010/16/9777/10019/5e11d791E1d2871b3/66a53d1849c687e7.png'
                 },
                 {
                     href: 'fun',
-                    title: '领京豆',
-                    src: 'https://img20.360buyimg.com/mcpageview/jfs/t1/105209/4/9857/12579/5e11d770E4e458bc7/fbbbec1918b041e3.png'
+                    title: '帅',
+                    src: '//img20.360buyimg.com/mcpageview/jfs/t1/105209/4/9857/12579/5e11d770E4e458bc7/fbbbec1918b041e3.png'
                 }
             ],
+
+
+
+            
         }
     }
 }
@@ -71,7 +75,7 @@ export default {
 /* @import url(); 引入css类 */
 @import '../../css/element.scss';
 .slider{
-    margin-top: 120px;
+    margin-top: 100px;
     width: 640px;
     height: 300px;
     background-color: #000;
