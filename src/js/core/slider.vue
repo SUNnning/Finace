@@ -6,7 +6,8 @@
                     <img :src="item.src" alt="">
                 </router-link>
             </swiper-slide>
-            <div class="swiper-pagination" slot="pagination"/>
+            <!-- <div class="swiper-pagination" slot="pagination"/> -->
+            <div :class="swiperOption.classType" :slot="swiperOption.slotType"/>
         </swiper>
     </section>
 </template>
@@ -33,15 +34,6 @@
                 type: Object,
                 default(){
                     return {
-                        loop: true,
-                        autoplay: {
-                            delay: 1500,
-                            stopOnLastSlide: false,
-                            disableOnInteraction: false
-                        },
-                        pagination: {
-                            el: '.swiper-pagination'
-                        } 
                     } 
                 }
             },

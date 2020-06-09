@@ -1,6 +1,6 @@
 <template>
     <article>
-        <Slider :cname="$style.slider" :items="items"/>
+        <Slider :cname="$style.slider" :swiperOption="swiperOption" :items="items"/>
         <section :class="$style.list">
             <div :class="$style.item" v-for="item in enters" :key="item.src">
                 <router-link :to="{name: item.href}">
@@ -21,6 +21,19 @@ export default {
     },
     data(){
         return {
+            swiperOption: {
+                loop: true,
+                autoplay: {
+                    delay: 1500,
+                    stopOnLastSlide: false,
+                    disableOnInteraction: false
+                },
+                pagination: {
+                    el: '.swiper-pagination'
+                },
+                classType: 'swiper-pagination',
+                slotType: 'pagination',
+            },
             items: [
                 {
                     href: 'funny0',
@@ -61,11 +74,7 @@ export default {
                     title: '帅',
                     src: '//img20.360buyimg.com/mcpageview/jfs/t1/105209/4/9857/12579/5e11d770E4e458bc7/fbbbec1918b041e3.png'
                 }
-            ],
-
-
-
-            
+            ],   
         }
     }
 }
