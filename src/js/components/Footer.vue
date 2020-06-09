@@ -53,6 +53,7 @@ export default {
                     width: 126px;
                     height: 128px;
                     background: url("../../../public/share.png") no-repeat;
+                    background-size: 5.9rem 3.9rem;
                     &:nth-child(1){
                         background-position: 0 2px;
                     }
