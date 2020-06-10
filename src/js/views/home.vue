@@ -15,8 +15,8 @@ import Heador from '../components/Header'
 import Adslider from '../components/Adslider'
 import Navbar from '../components/Navbar'
 import Novice from '../components/Novice'
-import Bill from '../components/bill'
-import Recommend from '../components/recommend'
+import Bill from '../components/Bill'
+import Recommend from '../components/Recommend'
 import Footer from '../components/Footer'
 export default {
     components: {

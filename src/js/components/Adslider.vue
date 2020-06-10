@@ -22,30 +22,30 @@ export default {
     data(){
         return {
             swiperOption: {
+                // classType: "swiper-pagination",
+                // slotType: "pagination",
                 loop: true,
                 autoplay: {
-                    delay: 1500,
+                    delay: 3000,
                     stopOnLastSlide: false,
                     disableOnInteraction: false
                 },
                 pagination: {
                     el: '.swiper-pagination'
                 },
-                classType: 'swiper-pagination',
-                slotType: 'pagination',
             },
             items: [
                 {
                     href: 'funny0',
-                    src: '//img20.360buyimg.com/mcpageview/jfs/t1/93607/27/9768/38387/5e11d688E04270824/2d9495f7de2365ca.jpg'
+                    src: 'http://p1.music.126.net/AC2-YtjaXZVp-v6B64CmZw==/109951165051200034.jpg'
                 },
                 {
                     href: 'funny1',
-                    src: '//img20.360buyimg.com/mcpageview/jfs/t1/106678/1/12210/92914/5e4535daE1770d4c3/30137746303353c1.jpg'
+                    src: 'http://p1.music.126.net/lUT8qxM9kj7s43OfcxVBfg==/109951165051178363.jpg'
                 },
                 {
                     href: 'funny2',
-                    src: '//img20.360buyimg.com/mcpageview/jfs/t1/122349/17/1613/199131/5ebe417bE9608b120/2d1eafa4647e5801.jpg'
+                    src: 'http://p1.music.126.net/OV9tq6ij6t02-G3apAL69w==/109951165050734196.jpg'
                 }
             ],
             enters: [

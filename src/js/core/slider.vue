@@ -34,6 +34,8 @@
                 type: Object,
                 default(){
                     return {
+                        classType: '',
+                        slotType: '',
                     } 
                 }
             },
