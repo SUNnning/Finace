@@ -1,5 +1,5 @@
 <template>
-    <Panel title="联系我们" :cname="$style.panel">
+    <Panel title="联系作者" :cname="$style.panel">
         <section :class="$style.content">
             <ul>
                 <li>
@@ -32,9 +32,11 @@ export default {
 .panel{
     @include panel;
     margin-bottom: 100px;
-    // >h4{
-    //     size: 48px;
-    // }
+    >h4{
+        background-color: #eee;
+        height: 90px;
+        // border-bottom: 1px solid #ddd;
+    }
     .content{
         background-color: #eee;
         li{
@@ -44,33 +46,33 @@ export default {
             color: grey;
             font-size: 24px;
             text-align: center;
-            border-bottom: 1px solid #ddd;
             &:nth-child(1){
                 @include list(row);
                 justify-content: space-around;
+                padding: 0 100px;
                 div{
                     box-sizing: border-box;
-                    width: 126px;
-                    height: 128px;
+                    width: 88px;
+                    height: 89px;
                     background: url("../../../public/share.png") no-repeat;
-                    background-size: 5.9rem 3.9rem;
+                    background-size: 4.13rem 2.73rem;
                     &:nth-child(1){
                         background-position: 0 2px;
                     }
                     &:nth-child(1):hover{
-                        background-position: 0 -124px;
+                        background-position: 0 -87px;
                     }
                     &:nth-child(2){
-                        background-position: -126px 2px;
+                        background-position: -88px 2px;
                     }
                     &:nth-child(2):hover{
-                        background-position: -126px -124px;
+                        background-position: -88px -87px;
                     }
                     &:nth-child(3){
-                        background-position: -252px 2px;
+                        background-position: -176px 2px;
                     }
                     &:nth-child(3):hover{
-                        background-position: -252px -124px;
+                        background-position: -176px -87px;
                     }
                 }
             }
