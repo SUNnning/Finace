@@ -85,6 +85,7 @@ export default {
                 display: block;
                 font-size: 22px;
                 color: #656565;
+                margin-top: -6px;
             }
         }
     }

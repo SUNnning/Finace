@@ -1,5 +1,5 @@
 <template>
-    <Panel title="新手特权" :cname="$style.panel">
+    <Panel title="需要听一听自己的内心" :cname="$style.panel">
         <section :class="$style.content">
             <div :class="$style.item">
                 <h4>下载APP<span :class="$style.red">和偶像吃饭</span></h4>
@@ -40,6 +40,7 @@ export default {
     @include panel;
     >h4{
         border-bottom: 1px solid #ddd;
+        color: #269;
     }
     .content{
         @include list(row);

@@ -16,8 +16,8 @@
     @include flex($direction);
 }
 
-@mixin panel($bgcolor:#fff,$padding:0,$margin:20px 0,$height:112px,
-$textPadding:0 32px,$color:#333,$fontSize:32){
+@mixin panel($bgcolor:#fff,$padding:0,$margin:20px 0,$height:80px,
+$textPadding:0 32px,$color:#333,$fontSize:24px){
     background-color: $bgcolor;
     margin: $margin;
     padding: $padding;

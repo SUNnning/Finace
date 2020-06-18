@@ -1,13 +1,14 @@
 <template>
     <Panel title="数据处理" :cname="$style.panel">
         <section>
-            <btn>采集</btn> &nbsp;
-            <btn @click.native="download">下载</btn> &nbsp;
-            <btn>
+            <btn style="width:24px;overflow:hidden;position:relative;top:4px;left:4px;padding:3.5px;">采集<input type="file" @change="handle" style="opacity: 0;position:absolute;top:0;left:0" /></btn> &nbsp;
+            <btn @click.native="download">下载</btn> 
+            <input type="text" style="margin:0 5px 0 50px" v-model="msg" @keyup.enter="echo">
+            <btn @click.native="echo">
                 <!-- <input type="button" value="上传点这里" onclick="javascript:('input[name=\'file\']').click();" /> -->
                 <!-- <input name="fileName" readonly /> -->
-                <input type="file" @change="handle" />
                 <!-- <input type="file">  -->
+                提交
             </btn>
         </section>
         <section>
@@ -30,6 +31,7 @@ import Panel from '../core/panel'
 import btn from '../core/btn'
 import { readFile, character, toExcel } from '../api/util'
 import xlsx from 'xlsx'
+// import ws from 'nodejs-websocket'
 export default {
     name: '',
     components: {
@@ -38,8 +40,14 @@ export default {
     },
     data(){
         return {
+            msg: '',
+            ws: null,
             arr: [
                 {
+                    'name': '谋可寡不可众',
+                    'phone': '利可众不可寡'
+                },
+                { 
                     'name': '大毛',
                     'phone': '00000000000'
                 },
@@ -102,8 +110,36 @@ export default {
             let data = this.arr.map( v=>filterVal.map(k=>v[k]));
             const [fileName, fileType, sheetName] = ['测试下载', 'xlsx', '测试页'];
             toExcel({th, data, fileName, fileType, sheetName});
+        },
+        echo(){
+            // const ws = new WebSocket()
+            if(!this.msg) return
+            console.log(`websocker 发送${this.msg}`);
+            this.ws.send(this.msg);
+        },
+        initWebSocket(){
+            this.ws = new WebSocket("ws://localhost:3000/");
+            // var ws = new WebSocket("ws://localhost:8096/websocket/111405");
+            this.ws.onopen = function (e) {
+                console.log('WebSocket已经打开: ')
+                console.log(e)
+            }
+            this.ws.onmessage = function (e) {
+                console.log('WS消息: ' + e.data)
+            }
+            this.ws.onclose = function (e) {
+                console.log('WebSocket关闭: ')
+                console.log(e)
+            }
+            this.ws.onerror = function (e) {
+                console.log('WebSocket发生错误: ')
+                console.log(e)
+            }
         }
-    }
+    },
+    created:function(){
+            this.initWebSocket();
+        }
 }
 </script>
 
