@@ -1,7 +1,13 @@
 <template>
     <Panel title="数据处理" :cname="$style.panel">
         <section>
-            <btn style="width:24px;overflow:hidden;position:relative;top:4px;left:4px;padding:3.5px;">采集<input type="file" @change="handle" style="opacity: 0;position:absolute;top:0;left:0" /></btn> &nbsp;
+            <btn>
+                <div style="position:relative;overflow:hidden">
+                    <!-- <span>采集</span> -->
+                    采集 
+                    <input type="file" @change="handle" style="opacity: 0;position:absolute;top:0;left:0" />
+                </div>
+            </btn> &nbsp;
             <btn @click.native="download">下载</btn> 
             <input type="text" style="margin:0 5px 0 50px" v-model="msg" @keyup.enter="echo">
             <btn @click.native="echo">
