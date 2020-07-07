@@ -56,20 +56,42 @@ const getters = {
         return price;
     },
 }
-const actions = {}
+const actions = {
+    addToCart({commit}, prodcut){
+        commit("addCart",{
+            id: prodcut.id
+        })
+    },
+    delFromCart({commit}, product){
+        commit("deleteCart", product)
+    },
+    clearCart({commit}){
+        commit("clearCart")
+    }
+}
 const mutations = {
-    addCart(state, {id, num}){
-        let product = state.shoplist.find(item=>item.id===id);
-        state.addlist.map(item=>{
-            if(item.id === id){
-                item.num += num;
-            }else{
-                state.addlist.push(product);
+    addCart(state, {id}){
+        let record = state.addlist.find(item=>item.id===id);
+        if(!record){
+            state.addlist.push({
+                id,
+                num: 1
+            })
+            console.log(state.addlist)
+        }else{
+            record.num++
+        }
+    },
+    deleteCart(state, product){
+        state.addlist.forEach((item, i)=>{
+            if(item.id === product.id){
+                state.addlist.splice(i, 1)
             }
         })
     },
-    deleteCart(){},
-    clearCart(){}
+    clearCart(state){
+        state.addlist = []
+    }
 }
 export default new Vuex.Store({
     state,

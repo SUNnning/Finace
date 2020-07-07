@@ -31,7 +31,7 @@ export default {
         justify-content: center;
         align-items: center;
         width: 640px;
-        height: 800px;
+        height: 200px;
         background-color: #666;
         .light{
             width: 320px;
